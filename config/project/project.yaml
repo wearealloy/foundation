@@ -1,0 +1,46 @@
+dateModified: 1657751298
+email:
+  fromEmail: anuar@hey.com
+  fromName: 'Craft Starter'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    43b9c7a9-4ef7-4581-8796-50cbb69843d3: 'Craft Foundation'
+    44241c29-7fa8-4bed-b279-7c56244753f0: 'Craft Starter'
+    eec48cf1-4dd3-46c0-9d5f-141fc091829e: Common
+plugins:
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      assetPath: ./
+      publicPath: public
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Craft Starter'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

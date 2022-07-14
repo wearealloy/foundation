@@ -1,0 +1,26 @@
+{
+  "buttons": [
+    "html",
+    "formatting",
+    "bold",
+    "italic",
+    "unorderedlist",
+    "orderedlist",
+    "link"
+  ],
+  "plugins": [
+    "alignment",
+    "properties",
+    "specialchars",
+    "beyondgrammar",
+    "textdirection",
+    "variable",
+    "limiter",
+    "counter"
+  ],
+  "formattingHide": [
+    "h1"
+  ],
+  "linkNewTab": true,
+  "toolbarFixed": true
+}
