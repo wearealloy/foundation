@@ -4,6 +4,10 @@
 * [Command reference](#command-reference)
 * [SASS reference](./resources/sass/README.md)
 
+## Getting started
+
+Run ```composer create-project heyblackmagic/foundation  ./PATH``` to create your Craft CMS instance.
+
 ## Command reference
 
 * Run ```npx mix watch``` to watch files to start development.
