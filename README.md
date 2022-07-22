@@ -38,7 +38,7 @@ When running `git commit -m 'some message'` or `git push` in terminal, Husky wil
  -  Import Database. (Request the DB to the project collaborator).
  - Run `valet link`
 
- ## .env setup
+ ## .env Setup
 We have two options to configure it:
 
 - Share it from one team member to another via slack, email... 
