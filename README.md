@@ -4,6 +4,7 @@
 
 - [Command reference](#command-reference)
 - [SASS reference](./resources/sass/README.md)
+- [Code Style reference](https://github.com/airbnb/javascript)
 
 ## Getting started
 
