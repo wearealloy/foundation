@@ -5,5 +5,5 @@ hasUrls: true
 language: en-US
 name: 'Craft Foundation'
 primary: true
-siteGroup: 44241c29-7fa8-4bed-b279-7c56244753f0
+siteGroup: 44241c29-7fa8-4bed-b279-7c56244753f0 # Craft Starter
 sortOrder: 1

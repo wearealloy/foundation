@@ -1,13 +1,13 @@
-dateModified: 1657751298
+dateModified: 1665491452
 email:
   fromEmail: anuar@hey.com
   fromName: 'Craft Starter'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    43b9c7a9-4ef7-4581-8796-50cbb69843d3: 'Craft Foundation'
-    44241c29-7fa8-4bed-b279-7c56244753f0: 'Craft Starter'
-    eec48cf1-4dd3-46c0-9d5f-141fc091829e: Common
+    43b9c7a9-4ef7-4581-8796-50cbb69843d3: 'Craft Foundation' # Craft Foundation
+    44241c29-7fa8-4bed-b279-7c56244753f0: 'Craft Starter' # Craft Starter
+    eec48cf1-4dd3-46c0-9d5f-141fc091829e: Common # Common
 plugins:
   field-manager:
     edition: standard
@@ -20,6 +20,10 @@ plugins:
     settings:
       assetPath: ./
       publicPath: public
+  quick-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   redactor:
     edition: standard
     enabled: true
