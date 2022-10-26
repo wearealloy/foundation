@@ -45,10 +45,7 @@ mix
       width: 1440,
       height: 1200
     },
-  });
-
-if (mix.inProduction()) {
-  mix.version();
-} else {
-  mix.sourceMaps(true, "source-map");
-}
+  })
+  .extract()
+  .version()
+  .sourceMaps(true, "source-map");

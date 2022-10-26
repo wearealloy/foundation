@@ -8,41 +8,30 @@
  * @see \craft\config\GeneralConfig
  */
 
+use craft\config\GeneralConfig;
 use craft\helpers\App;
 
-$isDev = App::env('CRAFT_ENVIRONMENT') === 'dev';
-$isProd = App::env('CRAFT_ENVIRONMENT') === 'production';
+return GeneralConfig::create()
+    // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
+    ->defaultWeekStartDay(1)
+    // Prevent generated URLs from including "index.php"
+    ->omitScriptNameInUrls()
+    // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
+    ->devMode(App::env('DEV_MODE') ?? false)
+    // Allow administrative changes
+    ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
+    // Disallow robots
+    ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
 
-return [
-    '*' => [
-        'aliases' => [
-            '@webroot' => dirname(__DIR__) . '/public',
-            '@web' => App::env('PRIMARY_SITE_URL'),
-            '@siteUrl' => App::env('PRIMARY_SITE_URL'),
-            '@filesystemMediaPath' => App::env('FILESYSTEM_MEDIA_PATH'),
-            '@filesystemMediaUrl' => App::env('FILESYSTEM_MEDIA_URL'),
-        ],
+    ->backupCommand(App::env('CRAFT_ENVIRONMENT') === 'dev' ? App::env('BACKUP_COMMAND') : false)
 
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 1,
+    ->restoreCommand(App::env('CRAFT_ENVIRONMENT') === 'dev' ? App::env('RESTORE_COMMAND') : false)
 
-        // Whether generated URLs should omit "index.php"
-        'omitScriptNameInUrls' => true,
-
-        // Whether Dev Mode should be enabled (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => $isDev,
-
-        // Whether administrative changes should be allowed
-        'allowAdminChanges' => $isDev,
-
-        // Whether crawlers should be allowed to index pages and following links
-        'disallowRobots' => !$isProd,
-    ],
-
-    'dev' => [
-        'aliases' => [
-            '@backupCommand' => App::env('BACKUP_COMMAND'),
-            '@restoreCommand' => App::env('RESTORE_COMMAND'),
-        ],
-    ],
-];
+    ->aliases([
+        '@webroot' => App::env('CRAFT_ENVIRONMENT') === 'dev' ? dirname(__DIR__) . '/public' : dirname(__DIR__) . '/public_html',
+        '@web' => App::env('PRIMARY_SITE_URL'),
+        '@siteUrl' => App::env('PRIMARY_SITE_URL'),
+        '@filesystemMediaPath' => App::env('FILESYSTEM_MEDIA_PATH'),
+        '@filesystemMediaUrl' => App::env('FILESYSTEM_MEDIA_URL'),
+    ])
+;

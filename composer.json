@@ -1,15 +1,15 @@
 {
   "name": "heyblackmagic/foundation",
   "type": "project",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "require": {
-    "craftcms/cms": "4.2.5.2",
+    "craftcms/cms": "^4.2.7",
     "craftcms/redactor": "^3.0",
     "ether/seo": "^4.0",
     "misterbk/mix": "^1.6",
-    "sebastianlenz/linkfield": "2.1.4",
-    "spicyweb/craft-quick-field": "2.0.2",
-    "verbb/field-manager": "3.0.2",
+    "sebastianlenz/linkfield": "^2.1",
+    "spicyweb/craft-quick-field": "^2.0",
+    "verbb/field-manager": "^3.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -33,11 +33,11 @@
   },
   "scripts": {
     "post-create-project-cmd": [
-      "@php craft setup/welcome"
+      "@php craft setup/welcome",
+      "npm install"
     ],
     "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-      "npm install"
+      "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ]
   }
 }

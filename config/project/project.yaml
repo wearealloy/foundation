@@ -1,13 +1,22 @@
-dateModified: 1665491452
+dateModified: 1666816717
 email:
   fromEmail: anuar@hey.com
-  fromName: 'Craft Starter'
+  fromName: Foundation
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  media:
+    hasUrls: true
+    name: Media
+    settings:
+      path: '@filesystemMediaPath'
+    type: craft\fs\Local
+    url: '@filesystemMediaUrl'
 meta:
   __names__:
-    43b9c7a9-4ef7-4581-8796-50cbb69843d3: 'Craft Foundation' # Craft Foundation
-    44241c29-7fa8-4bed-b279-7c56244753f0: 'Craft Starter' # Craft Starter
-    eec48cf1-4dd3-46c0-9d5f-141fc091829e: Common # Common
+    700b7e8f-d346-4c21-aca8-6c9ee985cd77: Foundation # Foundation
+    2507e5aa-62d0-4d14-8335-6e74e5041053: Foundation # Foundation
+    498798d1-e97a-4db6-bc4f-3228b8c51881: Common # Common
+    acf8b0db-5f3a-4dfd-be93-415733620f18: Images
 plugins:
   field-manager:
     edition: standard
@@ -17,9 +26,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-    settings:
-      assetPath: ./
-      publicPath: public
   quick-field:
     edition: standard
     enabled: true
@@ -39,7 +45,7 @@ plugins:
 system:
   edition: solo
   live: true
-  name: 'Craft Starter'
+  name: Foundation
   schemaVersion: 4.0.0.9
   timeZone: America/Los_Angeles
 users:
