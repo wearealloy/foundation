@@ -1,14 +1,14 @@
 {
   "name": "heyblackmagic/foundation",
   "type": "project",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "require": {
-    "craftcms/cms": "^4.2.7",
+    "craftcms/cms": "4.3.4",
     "craftcms/redactor": "^3.0",
     "ether/seo": "^4.0",
     "misterbk/mix": "^1.6",
-    "sebastianlenz/linkfield": "^2.1",
-    "spicyweb/craft-quick-field": "^2.0",
+    "sebastianlenz/linkfield": "2.1.5",
+    "spicyweb/craft-quick-field": "2.0.3",
     "verbb/field-manager": "^3.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
