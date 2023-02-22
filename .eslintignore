@@ -1,9 +1,0 @@
-node_modules/
-vendor/
-storage/
-modules/
-public/
-config/
-webpack.mix.js
-# unignore config files
-!.*.js
