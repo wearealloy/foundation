@@ -1,10 +1,10 @@
 {
   "name": "heyblackmagic/foundation",
   "type": "project",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "require": {
-    "craftcms/cms": "4.3.10",
-    "craftcms/redactor": "3.0.3",
+    "craftcms/cms": "4.4.5",
+    "craftcms/redactor": "3.0.4",
     "ether/seo": "^4.0",
     "misterbk/mix": "^1.6",
     "sebastianlenz/linkfield": "2.1.5",

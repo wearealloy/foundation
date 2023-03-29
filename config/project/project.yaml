@@ -1,4 +1,4 @@
-dateModified: 1677047311
+dateModified: 1680053714
 email:
   fromEmail: anuar@hey.com
   fromName: Foundation
@@ -46,7 +46,7 @@ system:
   edition: solo
   live: true
   name: Foundation
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

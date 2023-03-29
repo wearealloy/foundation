@@ -16,10 +16,6 @@ When running `git commit -m 'some message'` or `git push` in terminal, Husky wil
 
 ## Command reference
 
-- Run `npx mix watch` to watch files to start development.
-- Run `npx mix` to build assets for development.
-- Run `npx mix --production` to build assets for production.
-- Run `npm run lint` to analyzes your code to find problems (javascript).
-- Run `npm run lint:fix` to analyze and fix problems in the code (javascript).
-- Run `npm run stylelint` to analyzes your code to find problems (scss).
-- Run `npm run stylelint:fix` to analyze and fix problems in the code (scss).
+- Run `npx mix watch` or `npm run dev` to watch files to start development.
+- Run `npx mix` or `npm run staging` to build assets for staging server.
+- Run `npx mix --production` or `npm run production`  to build assets for production.
