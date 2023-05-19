@@ -1,4 +1,4 @@
-dateModified: 1680053714
+dateModified: 1684508566
 email:
   fromEmail: anuar@hey.com
   fromName: Foundation
@@ -22,10 +22,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  mix:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   quick-field:
     edition: standard
     enabled: true
@@ -34,14 +30,14 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
-  seo:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.2.0
   typedlinkfield:
     edition: standard
     enabled: true
     schemaVersion: 2.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true

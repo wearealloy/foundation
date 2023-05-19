@@ -4,6 +4,4 @@
 /vendor
 .DS_Store
 /node_modules
-public/js/
-public/css/
-public/mix-manifest.json
+public_html/dist
