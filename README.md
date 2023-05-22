@@ -1,21 +1,19 @@
 # Craft CMS 4 Foundation
 
-## Contents
-
-- [Command reference](#command-reference)
-- [SASS reference](./resources/sass/README.md)
-- [Code Style reference](https://github.com/airbnb/javascript)
-
 ## Getting started
 
 Run `composer create-project heyblackmagic/foundation ./PATH` to create your Craft CMS instance.
 
-## Features
+## Setup
 
-When running `git commit -m 'some message'` or `git push` in terminal, Husky will take care of running prettier (pre-commit) and eslint (pre-push) before allowing to execute the commit and push. If there are any errors in the code syntax you will need to fix them before you can commit code to the repository.
+After installing and configuring your Craft CMS instance, set the ./public_html directory as the project webroot. For example, if your virtual host is "<http://foundation.test>", run the following in your terminal:
+
+```zsh
+~/Sites/foundation main
+❯ cd public_html && valet link foundation
+```
 
 ## Command reference
 
-- Run `npx mix watch` or `npm run dev` to watch files to start development.
-- Run `npx mix` or `npm run staging` to build assets for staging server.
-- Run `npx mix --production` or `npm run production`  to build assets for production.
+- Run `npm run dev` to watch files to start development.
+- Run `npm run build` to build assets.
