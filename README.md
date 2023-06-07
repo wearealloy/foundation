@@ -13,6 +13,17 @@ After installing and configuring your Craft CMS instance, set the ./public_html 
 ❯ cd public_html && valet link foundation
 ```
 
+## IMPORTANT
+
+Your project URL, whether local, staging or production, MUST NOT include a trailing slash. Check that the `PRIMARY_SITE_URL` y `VITE_DEV_URL` variable in the `.env` follows this recommendation.
+
+Example:
+❌
+<http://foundation.test/>
+
+✅
+<https://foundation.test>
+
 ## Command reference
 
 - Run `npm run dev` to watch files to start development.

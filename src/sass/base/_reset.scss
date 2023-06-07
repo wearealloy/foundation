@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+*:not(ul, ol) {
+  margin: 0;
+  padding: 0;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:where([hidden]:not([hidden='until-found'])) {
+  display: none !important;
+}
+
+main {
+  outline: none;
+}
+
+:where(input, textarea, select) {
+  font-size: 16px;
+  color: inherit;
+}
+
+:where(textarea) {
+  resize: vertical;
+  resize: block;
+}
+
+:where(button, label, select, summary, [role='button'], [role='option'], .button) {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+:where(:disabled) {
+  cursor: not-allowed;
+}
+
+:where(label:has(> input:disabled), label:has(+ input:disabled)) {
+  cursor: not-allowed;
+}
+
+:where(a) {
+  text-underline-offset: 0.2ex;
+}
+
+:where(ul[role="list"], ol[role="list"]) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+  display: block;
+}
+
+:where(img, picture, svg) {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:where(img, video) {
+  object-fit: cover;
+  object-position: center;
+}
+
+:where(hr) {
+  border: none;
+  border-block-start: 1px solid;
+  color: inherit;
+  block-size: 0;
+  overflow: visible;
+}
+
+/*
+  This will hide the focus indicator if the element receives focus via the mouse,
+  but it will still show up on keyboard focus.
+*/
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+/*
+  Optionally: Define a strong focus indicator for keyboard focus.
+  If you choose to skip this step then the browser's default focus
+  indicator will be displayed instead.
+*/
+.js-focus-visible .focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

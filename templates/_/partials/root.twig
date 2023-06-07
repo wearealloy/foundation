@@ -8,7 +8,7 @@
 
 
 <!DOCTYPE html>
-<html lang="{{ craft.app.language }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html lang="{{ craft.app.language }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" class="no-js">
   <head>
 
     <link rel="dns-prefetch" href="{{ baseUrl }}" crossorigin>
@@ -20,14 +20,21 @@
     <meta name="csrf-token-name" content="{{ craft.app.config.general.csrfTokenName }}">
     <meta name="csrf-token" content="{{ craft.app.request.csrfToken() }}">
 
-
-    <meta name="theme-color" content="#000000">
-    {# -- Inline CSS block used by templates for Critical CSS -- #}
-    {# -- Only use Critical CSS & LoadCSS when we have it available to prevent flashing -- #}
-
     {% include "_/meta/favicon" %}
-  {{ craft.vite.script('src/js/app.js') }}
+    {{ craft.vite.script('src/js/app.js') }}
+    {% if env is not same as('dev') and env is not same as('staging')  %}
+      <noscript>
+        <link rel="stylesheet" href="{{ craft.vite.entry('app.css') }}">
+      </noscript>
+    {% endif %}
+
   </head>
 
-    <body {% if bodyClass is defined %} class="{{ bodyClass }}" {% endif %}>{% block main %}{% endblock %} </body>
-  </html>
+  <body>
+    <div class="body-wrapper">
+      {% include "_/components/header" %}
+      {% block main %}{% endblock %}
+      {% include "_/components/footer" %}
+    </div>
+  </body>
+</html>
