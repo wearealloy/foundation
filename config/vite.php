@@ -10,7 +10,7 @@ return [
     'errorEntry' => '',
     'cacheKeySuffix' => '',
     'devServerInternal' => App::env('VITE_DEV_URL'),
-    'checkDevServer' => true,
+    'checkDevServer' => App::env('ENVIRONMENT') === 'dev' || App::env('CRAFT_ENVIRONMENT') === 'dev',
     'includeReactRefreshShim' => false,
     'includeModulePreloadShim' => true,
 ];

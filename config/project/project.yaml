@@ -1,4 +1,4 @@
-dateModified: 1684508566
+dateModified: 1693141150
 email:
   fromEmail: anuar@hey.com
   fromName: Foundation
@@ -8,28 +8,25 @@ fs:
     hasUrls: true
     name: Media
     settings:
-      path: '@filesystemMediaPath'
+      path: '@webroot/media'
     type: craft\fs\Local
-    url: '@filesystemMediaUrl'
+    url: '@web/media'
 meta:
   __names__:
     700b7e8f-d346-4c21-aca8-6c9ee985cd77: Foundation # Foundation
     2507e5aa-62d0-4d14-8335-6e74e5041053: Foundation # Foundation
     498798d1-e97a-4db6-bc4f-3228b8c51881: Common # Common
+    61564484-3eee-4e39-ac3c-c82713562490: Simple # Simple
     acf8b0db-5f3a-4dfd-be93-415733620f18: Images # Images
 plugins:
-  field-manager:
+  ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 3.0.0.0
   quick-field:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  redactor:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.3.0
   typedlinkfield:
     edition: standard
     enabled: true
@@ -42,7 +39,7 @@ system:
   edition: solo
   live: true
   name: Foundation
-  schemaVersion: 4.4.0.4
+  schemaVersion: 4.5.0.3
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

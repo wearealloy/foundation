@@ -10,10 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/wearealloy/foundation.git"
   },
-  "keywords": [
-    "craft cms",
-    "laravel-mix"
-  ],
   "author": "Anuar Reyes <anuar@heyblackmagic.com>",
   "bugs": {
     "url": "https://github.com/wearealloy/foundation/issues"

@@ -32,7 +32,5 @@ return GeneralConfig::create()
         '@web' => App::env('PRIMARY_SITE_URL'),
         '@siteUrl' => App::env('PRIMARY_SITE_URL'),
         '@viteDevUrl' => App::env('VITE_DEV_URL'),
-        '@filesystemMediaPath' => App::env('FILESYSTEM_MEDIA_PATH'),
-        '@filesystemMediaUrl' => App::env('FILESYSTEM_MEDIA_URL'),
     ])
 ;
