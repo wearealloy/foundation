@@ -1,7 +1,7 @@
 import ViteRestart from 'vite-plugin-restart';
 
 export default ({ command }) => ({
-  base: command === 'server' ? '' : '/dist/',
+  base: command === 'serve' ? '' : '/dist/',
   publicDir: './src/public',
   build: {
     manifest: true,
