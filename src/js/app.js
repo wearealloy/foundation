@@ -1,2 +1,2 @@
-import '../sass/app.scss';
-import 'focus-visible';
+import "../css/globals.css";
+import "focus-visible";

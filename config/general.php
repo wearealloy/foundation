@@ -13,29 +13,31 @@ use craft\config\GeneralConfig;
 use craft\helpers\App;
 
 return GeneralConfig::create()
-	// Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
-	->defaultWeekStartDay(1)
-	// Prevent generated URLs from including "index.php"
-	->omitScriptNameInUrls()
-	// Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-	->devMode(App::env('DEV_MODE') ?? false)
-	// Allow administrative changes
-	->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
-	// Disallow robots
-	->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
+  // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
+  ->defaultWeekStartDay(1)
+  // Prevent generated URLs from including "index.php"
+  ->omitScriptNameInUrls()
+  // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
+  ->devMode(App::env('DEV_MODE') ?? false)
+  // Allow administrative changes
+  ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
+  // Disallow robots
+  ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
 
-	->backupCommand(App::env('CRAFT_ENVIRONMENT') === 'dev' ? App::env('BACKUP_COMMAND') : false)
+  ->backupCommand(App::env('CRAFT_ENVIRONMENT') === 'dev' ? App::env('BACKUP_COMMAND') : null)
 
-	->restoreCommand(App::env('CRAFT_ENVIRONMENT') === 'dev' ? App::env('RESTORE_COMMAND') : false)
+  ->restoreCommand(App::env('CRAFT_ENVIRONMENT') === 'dev' ? App::env('RESTORE_COMMAND') : null)
 
-	->aliases([
-		'@webroot' => dirname(__DIR__) . App::env('WEBROOT'),
-		'@web' => App::env('PRIMARY_SITE_URL'),
-		'@siteUrl' => App::env('PRIMARY_SITE_URL'),
-		'@viteDevUrl' => App::env('VITE_DEV_URL'),
-		'@manifest' => '@webroot/' . App::env('VITE_MANIFEST'),
-		'@js' => App::env('MAIN_JS'),
-		'@mediaPath' => App::env('FILESYSTEM_MEDIA_PATH'),
-		'@mediaUrl' => App::env('FILESYSTEM_MEDIA_URL'),
-		'@assets' => App::env('ASSETS'),
-	]);
+  ->preloadSingles(true)
+
+  ->aliases([
+    '@webroot' => dirname(__DIR__) . App::env('WEBROOT'),
+    '@web' => App::env('PRIMARY_SITE_URL'),
+    '@siteUrl' => App::env('PRIMARY_SITE_URL'),
+    '@viteDevUrl' => App::env('VITE_DEV_URL'),
+    '@manifest' => '@webroot/' . App::env('VITE_MANIFEST'),
+    '@js' => App::env('MAIN_JS'),
+    '@mediaPath' => App::env('FILESYSTEM_MEDIA_PATH'),
+    '@mediaUrl' => App::env('FILESYSTEM_MEDIA_URL'),
+    '@assets' => App::env('ASSETS'),
+  ]);

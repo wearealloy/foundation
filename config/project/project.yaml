@@ -1,4 +1,4 @@
-dateModified: 1693141150
+dateModified: 1704771489
 email:
   fromEmail: anuar@hey.com
   fromName: Foundation
@@ -8,9 +8,9 @@ fs:
     hasUrls: true
     name: Media
     settings:
-      path: '@webroot/media'
+      path: '@mediaPath'
     type: craft\fs\Local
-    url: '@web/media'
+    url: '@mediaUrl'
 meta:
   __names__:
     700b7e8f-d346-4c21-aca8-6c9ee985cd77: Foundation # Foundation
@@ -39,7 +39,7 @@ system:
   edition: solo
   live: true
   name: Foundation
-  schemaVersion: 4.5.0.3
+  schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

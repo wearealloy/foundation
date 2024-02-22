@@ -10,7 +10,6 @@
 <!DOCTYPE html>
 <html lang="{{ craft.app.language }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" class="no-js">
   <head>
-
     <link rel="dns-prefetch" href="{{ baseUrl }}" crossorigin>
     <link rel="preconnect" href="{{ baseUrl }}" crossorigin>
 
@@ -19,22 +18,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token-name" content="{{ craft.app.config.general.csrfTokenName }}">
     <meta name="csrf-token" content="{{ craft.app.request.csrfToken() }}">
-
-    {% include "_/meta/favicon" %}
-    {{ craft.vite.script('src/js/app.js') }}
-    {% if env is not same as('dev') and env is not same as('staging')  %}
-      <noscript>
-        <link rel="stylesheet" href="{{ craft.vite.entry('app.css') }}">
-      </noscript>
-    {% endif %}
-
+    {% block headScripts %}{% endblock %}
+    {{ include("_/meta/fonts") }}
+		{{ include("_/meta/favicon") }}
+    {{ craft.vite.script(alias('@js'), false) }}
   </head>
 
   <body>
     <div class="body-wrapper">
-      {% include "_/components/header" %}
+      {{ include("_/components/header", ignore_missing = true, with_context = false) }}
       {% block main %}{% endblock %}
-      {% include "_/components/footer" %}
+      {{ include("_/components/footer", ignore_missing = true, with_context = false) }}
     </div>
+    {% block bodyScripts %}{% endblock %}
   </body>
 </html>
