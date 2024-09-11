@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: Foundation
+primary: true
+siteGroup: e179b363-8cfe-41ca-ac5d-d902d2cb7eff # Foundation
+sortOrder: 1

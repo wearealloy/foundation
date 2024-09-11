@@ -1,0 +1,17 @@
+/* tailwind base */
+@import 'tailwindcss/base';
+
+/* project base */
+@import './base.css';
+
+/* tailwind components */
+@import 'tailwindcss/components';
+
+/* project components */
+@import './components/prose.css';
+
+/* tailwind utilities */
+@import 'tailwindcss/utilities';
+
+/* project utilities */
+@import './utilities.css';

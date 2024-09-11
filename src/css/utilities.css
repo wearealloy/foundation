@@ -1,0 +1,17 @@
+@layer utilities {
+  .stack {
+    grid-template-areas: 'stack';
+
+    > * {
+      grid-area: stack;
+    }
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

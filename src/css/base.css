@@ -1,0 +1,16 @@
+@layer base {
+  :root {
+    /* spacing scale */
+    --space-25: 1.5625rem;
+    --space-50: 3.125rem;
+    --space-75: 4.6875rem;
+    --space-100: 6.25rem;
+    --space-125: 7.8125rem;
+    --space-140: 8.75rem;
+    --space-150: 9.375rem;
+    --space-175: 10.9375rem;
+    --space-200: 12.5rem;
+    --space-225: 14.0625rem;
+    --space-250: 15.625rem;
+  }
+}

@@ -1,0 +1,21 @@
+@layer components {
+  .prose {
+    --flow: 1rem;
+
+    @screen lg {
+      --flow: 1.5rem;
+    }
+
+    :where(h1, h2, h3, h4) {
+      --flow: 1.85rem;
+
+      @screen lg {
+        --flow: 2.25rem;
+      }
+    }
+
+    > * + * {
+      margin-block-start: var(--flow);
+    }
+  }
+}

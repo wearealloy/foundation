@@ -1,0 +1,41 @@
+{
+  "useTabs": false,
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": true,
+  "twigSingleQuote": true,
+  "trailingComma": "es5",
+  "bracketSameLine": true,
+  "singleAttributePerLine": false,
+  "twigAlwaysBreakObjects": false,
+  "printWidth": 80,
+  "twigMultiTags": [
+    "nav,endnav",
+    "switch,case,default,endswitch",
+    "ifchildren,endifchildren",
+    "cache,endcache",
+    "js,endjs",
+    "css,endcss",
+    "set,endset"
+  ],
+  "overrides": [
+    {
+      "files": "*.php",
+      "options": {
+        "phpVersion": "8.3",
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.twig",
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ],
+  "plugins": [
+    "@zackad/prettier-plugin-twig",
+    "@prettier/plugin-php",
+    "prettier-plugin-tailwindcss"
+  ]
+}
