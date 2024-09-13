@@ -12,7 +12,7 @@ Foundation is a starter project built to streamline development with Craft CMS 5
 
 Before installing this repository, **ensure that the following tools are installed and properly configured**:
 
-- Docker: [OrbStack](https://orbstack.dev/), [Lima](https://github.com/lima-vm/lima), [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Rancher Desktop](https://rancherdesktop.io/), [Colima](https://github.com/abiosoft/colima). **[Follow the recommended settings](https://ddev.readthedocs.io/en/stable/users/install/docker-installation/#macos)**.
+- Docker: You only need one Docker provider installed. We recommend using [OrbStack](https://orbstack.dev/), but other options like [Lima](https://github.com/lima-vm/lima), [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Rancher Desktop](https://rancherdesktop.io/), or [Colima](https://github.com/abiosoft/colima) are also compatible. **[Follow the recommended settings](https://ddev.readthedocs.io/en/stable/users/install/docker-installation/#macos)**.
 - [DDEV](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/#macos).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
@@ -39,26 +39,31 @@ There are two cases where you might need to install this repo:
 1. Create project with [Composer's](https://getcomposer.org/) `create-project` command:
 
 ```bash
-composer create-project heyblackmagic/foundation ./YOUR_PATH --no-install
-# Replace `./YOUR_PATH` with the project directory path.
+composer create-project heyblackmagic/foundation --no-install ./YOUR_PATH && cd YOUR_PATH
+# Replace `YOUR_PATH` with the project directory path.
 # The --no-install option in Composer prevents the installation step
 # from running after the composer.lock file is updated
 ```
+2. Ensure you are in the directory you created for the project:
 
-2. Set the project name and any other [DDEV config options](https://ddev.readthedocs.io/en/stable/users/configuration/config/).
+```bash
+cd ./YOUR_PATH
+```
+
+3. Set the project name and any other [DDEV config options](https://ddev.readthedocs.io/en/stable/users/configuration/config/).
 
 ```bash
 ddev config --project-name=YOUR_PROJECT_NAME
 # Replace YOUR_PROJECT_NAME with the name of your project.
 ```
 
-3. Boot the project:
+4. Boot the project:
 
 ```bash
 ddev start
 ```
 
-4. Install Craft CMS.
+5. Install Craft CMS. **IMPORTANT:** During the installation, the Craft CLI will prompt for information such as database credentials (name, password, user, and database driver) or the project URL. These values are pre-configured and should not be edited.
 
 ```bash
 ddev craft install
@@ -66,14 +71,27 @@ ddev craft install
 ddev craft install \
   --username="YOUR_USERNAME" \
   --email="YOUR_EMAIL@DOMAIN.COM" \
-  --password="YOUR_PASSWORD"
+  --password="YOUR_PASSWORD" \
+  --site-url='$DDEV_PRIMARY_URL'
 ```
 
-5. Open project with VSCode.
+6. Open project with VSCode.
 
 ```bash
 ddev code
 ```
+
+**It’s possible that VSCode will ask if you want to install the recommended extensions for this repository.**
+
+![VSCode recommended extensions notification](/.vscode/vscode-recommended-prompt.png)
+
+We highly recommend installing the suggested extensions. [You can see a full list of recommended extensions here.](#vscode-extensions)
+
+If VSCode doesn’t prompt you about the recommended extensions, you can check them manually by going to Extensions (shift + command + X). In the search bar, filter by “Recommended.”
+
+![VSCode extensions panel](/.vscode/vscode-filter-recommended.png)
+
+____
 
 At this point, running `ddev launch` or `ddev launch /admin` will open your project's URL in the default browser.
 
@@ -105,6 +123,18 @@ ddev craft db/restore ./YOUR_DB_BACKUP_PATH
 ddev code
 ```
 
+**It’s possible that VSCode will ask if you want to install the recommended extensions for this repository.**
+
+![VSCode recommended extensions notification](/.vscode/vscode-recommended-prompt.png)
+
+We highly recommend installing the suggested extensions. [You can see a full list of recommended extensions here.](#vscode-extensions)
+
+If VSCode doesn’t prompt you about the recommended extensions, you can check them manually by going to Extensions (shift + command + X). In the search bar, filter by “Recommended.”
+
+![VSCode extensions panel](/.vscode/vscode-filter-recommended.png)
+
+____
+
 You’re ready to continue developing on your existing project.
 
 Happy coding!
@@ -121,3 +151,13 @@ However, when you run the `ddev code` command, VSCode opens the project with the
 - `ddev npm run dev`: Start Vite development server.
 - `ddev npm run build`: Compile JS and CSS with Vite.
 - `ddev craft`: Craft console app.
+
+## VSCode Extensions
+
+We strongly recommend installing the following extensions for a better development experience:
+
+- [DEV Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers): The Dev Containers extension lets you use a Docker container as a full-featured development environment.
+- [EditorConfig for VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): This plugin attempts to override user/workspace settings with settings found in .editorconfig files.
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss): Tailwind CSS IntelliSense enhances the Tailwind development experience by providing Visual Studio Code users with advanced features such as autocomplete, syntax highlighting, and linting.
+- [Twiggy](https://marketplace.visualstudio.com/items?itemName=moetelo.twiggy): Twiggy Language Server provides syntax highlighting, autocompletion, and formatting for Twig. It is recommended to uninstall any other Twig extensions.
