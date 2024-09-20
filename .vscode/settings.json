@@ -23,5 +23,11 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "intelephense.environment.phpVersion": "8.3"
+  "intelephense.environment.phpVersion": "8.3",
+  "twiggy.autoInsertSpaces": true,
+  "twiggy.framework": "craft",
+  "twiggy.inlayHints.block": true,
+  "twiggy.inlayHints.macro": true,
+  "twiggy.inlayHints.macroArguments": true,
+  "twiggy.phpExecutable": "php"
 }
