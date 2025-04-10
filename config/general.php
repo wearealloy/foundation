@@ -17,7 +17,7 @@ return GeneralConfig::create()
     // Prevent generated URLs from including "index.php"
     ->omitScriptNameInUrls()
     // Preload Single entries as Twig variables
-    ->preloadSingles()
+    ->preloadSingles(false)
     // Prevent user enumeration attacks
     ->preventUserEnumeration()
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
