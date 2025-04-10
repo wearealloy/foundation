@@ -25,9 +25,11 @@ return GeneralConfig::create()
         '@webroot' => dirname(__DIR__) . '/web',
         '@web' => App::env('PRIMARY_SITE_URL'),
         '@siteUrl' => App::env('PRIMARY_SITE_URL'),
-        '@viteDevServerUrl' => App::env('PRIMARY_SITE_URL') . ':' . App::env('DDEV_VITE_PORT'),
-        '@viteServerUrl' => rtrim(App::env('PRIMARY_SITE_URL'), '/') . '/dist/',
-        '@fileSystemImagesPath' => App::env('FILESYSTEM_IMAGES_PATH'),
-        '@fileSystemImagesUrl' => '@web' . App::env('FILESYSTEM_IMAGES_URL'),
+        '@url' => App::env('PRIMARY_SITE_URL'),
+        '@viteManifest' => App::env('VITE_MANIFEST'),
+        '@viteDevUrl' => App::env('VITE_DEV_URL'),
+        '@viteBuildUrl' => App::env('VITE_BUILD_URL'),
+        '@viteErrorEntry' => App::env('VITE_ERROR_ENTRY'),
+        '@assets' => "@webroot/assets",
     ])
 ;

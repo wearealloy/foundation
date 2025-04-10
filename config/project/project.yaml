@@ -1,4 +1,4 @@
-dateModified: 1726023422
+dateModified: 1744248782
 email:
   fromEmail: anuar@heyblackmagic.com
   fromName: Foundation
@@ -8,9 +8,9 @@ fs:
     hasUrls: true
     name: Images
     settings:
-      path: '@fileSystemImagesPath'
+      path: '@webroot/uploads/images'
     type: craft\fs\Local
-    url: '@fileSystemImagesUrl'
+    url: '@url/uploads/images'
 meta:
   __names__:
     c4f1af9d-b96d-45b6-b918-22715d89be7a: Images # Images
@@ -30,7 +30,7 @@ system:
   edition: solo
   live: true
   name: Foundation
-  schemaVersion: 5.3.0.2
+  schemaVersion: 5.6.0.2
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

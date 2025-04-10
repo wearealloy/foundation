@@ -3,8 +3,6 @@ type: craftcms
 docroot: web
 php_version: "8.3"
 webserver_type: nginx-fpm
-router_http_port: "80"
-router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
@@ -13,11 +11,12 @@ database:
     version: "8.0"
 use_dns_when_possible: true
 composer_version: "2"
-web_environment:
-    - DDEV_VITE_PORT=5173
-nodejs_version: 20.17.0
+web_environment: []
 corepack_enable: false
 disable_upload_dirs_warning: true
+webimage_extra_packages: [jpegoptim optipng gifsicle webp]
+upload_dirs:
+  - uploads
 web_extra_exposed_ports:
     - name: vite
       container_port: 5173
