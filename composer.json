@@ -8,6 +8,7 @@
     "craftcms/cms": "5.6.16",
     "nystudio107/craft-imageoptimize": "^5.0.7",
     "nystudio107/craft-seomatic": "5.1.12",
+    "nystudio107/craft-templatecomments": "^5.0.4",
     "nystudio107/craft-vite": "^5.0.1",
     "vlucas/phpdotenv": "^5.4.0"
   },

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db0dd13d9362d408f539ad92ace758ef",
+    "content-hash": "1bfc927a86d2a64b0d3b66e8eddad585",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2322,6 +2322,54 @@
                 "source": "https://github.com/nystudio107/craft-seomatic"
             },
             "time": "2025-04-04T02:36:35+00:00"
+        },
+        {
+            "name": "nystudio107/craft-templatecomments",
+            "version": "5.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-templatecomments/zipball/7370276394a3e63b866e0936f5a7809e87f00037",
+                "reference": "7370276394a3e63b866e0936f5a7809e87f00037",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.4.0",
+                "php": "^8.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "class": "nystudio107\\templatecomments\\TemplateComments",
+                "handle": "templatecomments",
+                "name": "Template Comments"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\templatecomments\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com/"
+                }
+            ],
+            "description": "Adds a HTML comment with performance timings to demarcate `{% block %}`s and each Twig template that is included or extended.",
+            "keywords": [
+                "comments",
+                "craft-plugin",
+                "craftcms",
+                "debugging",
+                "twig"
+            ],
+            "support": {
+                "docs": "https://nystudio107.com/docs/template-comments/",
+                "issues": "https://nystudio107.com/plugins/template-comments/support",
+                "source": "https://github.com/nystudio107/craft-templatecomments"
+            },
+            "time": "2024-11-29T18:54:17+00:00"
         },
         {
             "name": "nystudio107/craft-vite",
