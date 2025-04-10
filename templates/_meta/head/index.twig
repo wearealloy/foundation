@@ -1,0 +1,11 @@
+<link rel="dns-prefetch" href="{{ baseUrl }}" crossorigin />
+<link rel="preconnect" href="{{ baseUrl }}" crossorigin />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="csrf-token-name" content="{{ craft.app.config.general.csrfTokenName }}" />
+<meta name="csrf-token" content="{{ craft.app.request.csrfToken() }}" />
+{# prettier-ignore-start #}
+<script>
+    document.documentElement.classList.replace('no-js', 'js');
+</script>
+{# prettier-ignore-end #}
+{{ craft.vite.script("src/entrypoint.js", false) }}

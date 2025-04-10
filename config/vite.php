@@ -34,23 +34,23 @@ return [
     /**
      * @var string File system path (or URL) to the Vite-built manifest.json
      */
-    'manifestPath' => '@webroot/dist/.vite/manifest.json',
+    'manifestPath' => '@viteManifest',
 
     /**
      * @var string The public URL to the dev server (what appears in `<script src="">` tags
      */
-    'devServerPublic' => '@viteDevServerUrl',
+    'devServerPublic' => '@viteDevUrl',
 
     /**
      * @var string The public URL to use when not using the dev server
      */
-    'serverPublic' => '@viteServerUrl',
+    'serverPublic' => '@viteBuildUrl',
 
     /**
      * @var string|array The JavaScript entry from the manifest.json to inject on Twig error pages
      *              This can be a string or an array of strings
      */
-    'errorEntry' => '',
+    'errorEntry' => '@viteErrorEntry',
 
     /**
      * @var string String to be appended to the cache key
@@ -62,7 +62,7 @@ return [
      *              This can be the same as `$devServerPublic`, but may be different in containerized or VM setups.
      *              ONLY used if $checkDevServer = true
      */
-    'devServerInternal' => '@viteDevServerUrl',
+    'devServerInternal' => '@viteDevUrl',
 
     /**
      * @var bool Should we check for the presence of the dev server by pinging $devServerInternal to make sure it's running?
@@ -77,7 +77,7 @@ return [
     /**
      * @var bool Whether the modulepreload-polyfill shim should be included
      */
-    'includeModulePreloadShim' => false,
+    'includeModulePreloadShim' => true,
 
     /**
      * @var string File system path (or URL) to where the Critical CSS files are stored
@@ -92,5 +92,5 @@ return [
     /**
      * @var bool Whether an onload handler should be added to <script> tags to fire a custom event when the script has loaded
      */
-    'includeScriptOnloadHandler' => false,
+    'includeScriptOnloadHandler' => true,
 ];

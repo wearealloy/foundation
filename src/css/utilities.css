@@ -1,17 +1,57 @@
-@layer utilities {
-  .stack {
-    grid-template-areas: 'stack';
+@utility overlay {
+  border-image: fill 0
+    linear-gradient(--alpha(var(--color-black) / 30%), --alpha(var(--color-black) / 80%));
+}
 
-    > * {
-      grid-area: stack;
-    }
+@utility stack {
+  grid-template:
+    [stack-start] "stack" var(--stack-size, auto)
+    [stack-end] / [stack-start] 1fr [stack-end];
+
+  & > *,
+  &::after,
+  &::before {
+    grid-area: stack;
   }
 
-  .hide-scrollbar {
-    scrollbar-width: none;
+  .stack-image,
+  .stack-video {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
   }
 
-  .hide-scrollbar::-webkit-scrollbar {
+  .stack-content {
+    z-index: 1;
+  }
+}
+
+@custom-variant has-debug-toolbar {
+  &:has(.yii-debug-toolbar) {
+    @slot;
+  }
+}
+
+@utility hide-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
     display: none;
   }
+}
+
+@utility outline-default {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+@utility text-box-cap {
+  text-box: cap alphabetic;
+}
+
+@utility text-box-ex {
+  text-box: ex alphabetic;
+}
+
+@utility text-box-none {
+  text-box: none;
 }

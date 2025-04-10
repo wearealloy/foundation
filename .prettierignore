@@ -5,7 +5,7 @@
 /storage/*
 
 # Document root
-/web/*
+/public_html/*
 
 # BUILD FILES
 /bower_components/*

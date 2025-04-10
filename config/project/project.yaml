@@ -1,4 +1,4 @@
-dateModified: 1726023422
+dateModified: 1744253998
 email:
   fromEmail: anuar@heyblackmagic.com
   fromName: Foundation
@@ -8,20 +8,29 @@ fs:
     hasUrls: true
     name: Images
     settings:
-      path: '@fileSystemImagesPath'
+      path: '@webroot/uploads/images'
     type: craft\fs\Local
-    url: '@fileSystemImagesUrl'
+    url: '@url/uploads/images'
 meta:
   __names__:
     c4f1af9d-b96d-45b6-b918-22715d89be7a: Images # Images
     e179b363-8cfe-41ca-ac5d-d902d2cb7eff: Foundation # Foundation
     fff667bf-7fe7-4ddb-96b6-fdd705423387: Foundation # Foundation
 plugins:
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: LQI39I78TN4K70RIQXVZ5L3E
+    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true
     licenseKey: 6Z40HLW3WLSF0ULSS1U0P8AI
     schemaVersion: 3.0.12
+  templatecomments:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   vite:
     edition: standard
     enabled: true
@@ -30,7 +39,7 @@ system:
   edition: solo
   live: true
   name: Foundation
-  schemaVersion: 5.3.0.2
+  schemaVersion: 5.6.0.2
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
