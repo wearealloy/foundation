@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a14b52a0226b8217a956871453d7b945",
+    "content-hash": "0c11eaa690dec381aad3a5e98ce6adb3",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1928,73 +1928,6 @@
                 }
             ],
             "time": "2025-03-24T10:02:05+00:00"
-        },
-        {
-            "name": "nystudio107/craft-closure",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nystudio107/craft-closure.git",
-                "reference": "e617633ebc8fb6d392329f5e8eccfe4f1fae5481"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-closure/zipball/e617633ebc8fb6d392329f5e8eccfe4f1fae5481",
-                "reference": "e617633ebc8fb6d392329f5e8eccfe4f1fae5481",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.3.0 || ^5.0.0",
-                "php": "^8.0",
-                "twig/twig": "^3.0.0"
-            },
-            "require-dev": {
-                "craftcms/ecs": "dev-main",
-                "craftcms/phpstan": "dev-main",
-                "craftcms/rector": "dev-main"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "bootstrap": "nystudio107\\closure\\Closure"
-            },
-            "autoload": {
-                "psr-4": {
-                    "nystudio107\\closure\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "nystudio107",
-                    "homepage": "https://nystudio107.com"
-                }
-            ],
-            "description": "Allows you to use arrow function closures in Twig",
-            "keywords": [
-                "Arrow",
-                "Craft",
-                "closure",
-                "closures",
-                "cms",
-                "craftcms",
-                "function",
-                "twig"
-            ],
-            "support": {
-                "docs": "https://github.com/nystudio107/craft-closure/blob/v1/README.md",
-                "issues": "https://github.com/nystudio107/craft-closure/issues",
-                "source": "https://github.com/nystudio107/craft-closure"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/khalwat",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-07-31T21:09:06+00:00"
         },
         {
             "name": "nystudio107/craft-code-editor",
@@ -6670,11 +6603,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },
