@@ -1,6 +1,6 @@
+import path from 'path';
 import { defineConfig } from 'vite';
 import VitePluginRestart from 'vite-plugin-restart';
-import path from 'path';
 
 const PORT = process.env.DDEV_VITE_PORT;
 const ORIGIN = `${process.env.DDEV_PRIMARY_URL}:${PORT}`;
