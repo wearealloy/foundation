@@ -1,4 +1,4 @@
-dateModified: 1744248782
+dateModified: 1744253173
 email:
   fromEmail: anuar@heyblackmagic.com
   fromName: Foundation
@@ -17,6 +17,11 @@ meta:
     e179b363-8cfe-41ca-ac5d-d902d2cb7eff: Foundation # Foundation
     fff667bf-7fe7-4ddb-96b6-fdd705423387: Foundation # Foundation
 plugins:
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: LQI39I78TN4K70RIQXVZ5L3E
+    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true
