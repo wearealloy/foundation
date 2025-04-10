@@ -1,0 +1,39 @@
+{# -- Default layout template for HTML pages -- #}
+{#
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ┌─────────────────────────────────────────────────────────────────────────┐ │
+│ │                                                                         │ │
+│ │                                                                         │ │
+│ │                                                                         │ │
+│ │                               mainContent                               │ │
+│ └─────────────────────────────────────────────────────────────────────────┘ │
+│                                  bodyHtml                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+#}
+
+{% extends "_base/blocks" %}
+
+{# -- Any <meta> tags that should be included in the <head> #}
+{% block headMeta %}
+
+{% endblock %}
+
+{# -- Any <link> tags that should be included in the <head> #}
+{% block headLinks %}
+
+{% endblock %}
+
+{# -- Any JavaScript that should be included before </head> -- #}
+{% block headJs %}
+
+{% endblock %}
+
+{% block bodyHtml %}
+    {% block main %}
+        <main id="main-content" class="grow outline-none" tabindex="-1">
+            {% block mainContent %}
+
+            {% endblock %}
+        </main>
+    {% endblock %}
+{% endblock %}

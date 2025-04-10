@@ -1,21 +1,26 @@
-@layer components {
-  .prose {
-    --flow: 1rem;
+.prose {
+  text-box: cap alphabetic;
+  text-wrap: pretty;
+  --prose-flow: --spacing(4.5);
 
-    @screen lg {
-      --flow: 1.5rem;
-    }
+  & > *:where(:not(.not-prose, .not-prose *)) {
+    margin-block: var(--prose-flow) 0;
+  }
 
-    :where(h1, h2, h3, h4) {
-      --flow: 1.85rem;
+  ul:where(:not(.not-prose, .not-prose *)) {
+    padding-inline-start: --spacing(6);
+    list-style-type: disc;
+  }
 
-      @screen lg {
-        --flow: 2.25rem;
-      }
-    }
+  ol:where(:not(.not-prose, .not-prose *)) {
+    padding-inline-start: --spacing(6);
+    list-style-type: decimal;
+  }
 
-    > * + * {
-      margin-block-start: var(--flow);
-    }
+  a:not(:where(:is(h2, h3, h4) *)):where(:not(.not-prose, .not-prose *)) {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 1px;
   }
 }
