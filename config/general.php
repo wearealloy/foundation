@@ -22,10 +22,9 @@ return GeneralConfig::create()
     ->preventUserEnumeration()
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
     ->aliases([
-        '@webroot' => dirname(__DIR__) . '/public_html',
-        '@web' => App::env('PRIMARY_SITE_URL'),
-        '@siteUrl' => App::env('PRIMARY_SITE_URL'),
-        '@url' => App::env('PRIMARY_SITE_URL'),
-        '@assets' => "@webroot/assets",
-    ])
-;
+        "@webroot" => dirname(__DIR__) . "/public_html",
+        "@web" => App::env("PRIMARY_SITE_URL"),
+        "@siteUrl" => App::env("PRIMARY_SITE_URL"),
+        "@url" => App::env("PRIMARY_SITE_URL"),
+        "@assets" => "@webroot/assets",
+    ]);
