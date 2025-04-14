@@ -34,23 +34,23 @@ return [
     /**
      * @var string File system path (or URL) to the Vite-built manifest.json
      */
-    'manifestPath' => '@viteManifest',
+    'manifestPath' => App::env('VITE_MANIFEST'),
 
     /**
      * @var string The public URL to the dev server (what appears in `<script src="">` tags
      */
-    'devServerPublic' => '@viteDevUrl',
+    'devServerPublic' => App::env('VITE_DEV_SERVER_PUBLIC'),
 
     /**
      * @var string The public URL to use when not using the dev server
      */
-    'serverPublic' => '@viteBuildUrl',
+    'serverPublic' => App::env('VITE_SERVER_PUBLIC'),
 
     /**
      * @var string|array The JavaScript entry from the manifest.json to inject on Twig error pages
      *              This can be a string or an array of strings
      */
-    'errorEntry' => '@viteErrorEntry',
+    'errorEntry' => App::env('VITE_ERROR_ENTRY'),
 
     /**
      * @var string String to be appended to the cache key
@@ -62,7 +62,7 @@ return [
      *              This can be the same as `$devServerPublic`, but may be different in containerized or VM setups.
      *              ONLY used if $checkDevServer = true
      */
-    'devServerInternal' => '@viteDevUrl',
+    'devServerInternal' => App::env('VITE_DEV_SERVER_INTERNAL'),
 
     /**
      * @var bool Should we check for the presence of the dev server by pinging $devServerInternal to make sure it's running?

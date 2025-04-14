@@ -26,10 +26,6 @@ return GeneralConfig::create()
         '@web' => App::env('PRIMARY_SITE_URL'),
         '@siteUrl' => App::env('PRIMARY_SITE_URL'),
         '@url' => App::env('PRIMARY_SITE_URL'),
-        '@viteManifest' => App::env('VITE_MANIFEST'),
-        '@viteDevUrl' => App::env('VITE_DEV_URL'),
-        '@viteBuildUrl' => App::env('VITE_BUILD_URL'),
-        '@viteErrorEntry' => App::env('VITE_ERROR_ENTRY'),
         '@assets' => "@webroot/assets",
     ])
 ;
