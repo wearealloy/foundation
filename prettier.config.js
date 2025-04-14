@@ -31,6 +31,7 @@ const config = {
       options: {
         phpVersion: "8.2",
         tabWidth: 4,
+        singleQuote: false,
       },
     },
     {

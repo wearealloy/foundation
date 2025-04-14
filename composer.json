@@ -1,11 +1,11 @@
 {
   "name": "heyblackmagic/foundation",
   "type": "project",
-  "version": "3.2",
+  "version": "3.2.1",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/cms": "5.6.16",
+    "craftcms/cms": "5.6.17",
     "nystudio107/craft-imageoptimize": "^5.0.7",
     "nystudio107/craft-seomatic": "5.1.12",
     "nystudio107/craft-templatecomments": "^5.0.4",
