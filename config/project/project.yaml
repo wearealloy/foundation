@@ -1,4 +1,4 @@
-dateModified: 1746715053
+dateModified: 1746715127
 email:
   fromEmail: anuar@heyblackmagic.com
   fromName: Foundation
@@ -26,7 +26,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 6Z40HLW3WLSF0ULSS1U0P8AI
-    schemaVersion: 3.0.12
+    schemaVersion: 3.0.13
   templatecomments:
     edition: standard
     enabled: true

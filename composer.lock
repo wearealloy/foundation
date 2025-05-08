@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b4c1ba8c54015af4efc32cdab79bf53",
+    "content-hash": "f0444a3033d8711112aedf6737f91a8d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2262,11 +2262,11 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "5.1.12",
+            "version": "5.1.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/a2f6fe4ec2fafb747735deafb72a2b929b80d60e",
-                "reference": "a2f6fe4ec2fafb747735deafb72a2b929b80d60e",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/cc9616d067f1650845603eeb0adacf685e0565ab",
+                "reference": "cc9616d067f1650845603eeb0adacf685e0565ab",
                 "shasum": ""
             },
             "require": {
@@ -2318,7 +2318,7 @@
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
                 "source": "https://github.com/nystudio107/craft-seomatic"
             },
-            "time": "2025-04-04T02:36:35+00:00"
+            "time": "2025-04-24T23:56:25+00:00"
         },
         {
             "name": "nystudio107/craft-templatecomments",
