@@ -1,4 +1,4 @@
-dateModified: 1746715127
+dateModified: 1746809501
 email:
   fromEmail: anuar@heyblackmagic.com
   fromName: Foundation
@@ -13,10 +13,15 @@ fs:
     url: '@url/uploads/images'
 meta:
   __names__:
+    729dc30c-eeb4-4aed-8b4a-4e1f07b36896: Simple # Simple
     c4f1af9d-b96d-45b6-b918-22715d89be7a: Images # Images
     e179b363-8cfe-41ca-ac5d-d902d2cb7eff: Foundation # Foundation
     fff667bf-7fe7-4ddb-96b6-fdd705423387: Foundation # Foundation
 plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
   image-optimize:
     edition: standard
     enabled: true
@@ -27,6 +32,10 @@ plugins:
     enabled: true
     licenseKey: 6Z40HLW3WLSF0ULSS1U0P8AI
     schemaVersion: 3.0.13
+  splash:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
   templatecomments:
     edition: standard
     enabled: true

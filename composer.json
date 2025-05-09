@@ -5,11 +5,16 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
+    "craftcms/ckeditor": "^4.8",
     "craftcms/cms": "5.7.5",
+    "ether/splash": "^5.0",
+    "fakerphp/faker": "^1.24",
+    "newridetech/php-classnames": "^1.2",
     "nystudio107/craft-imageoptimize": "^5.0.7",
     "nystudio107/craft-seomatic": "5.1.13",
     "nystudio107/craft-templatecomments": "^5.0.4",
     "nystudio107/craft-vite": "^5.0.1",
+    "twig/html-extra": "^3.21",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
