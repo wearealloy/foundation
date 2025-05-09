@@ -39,31 +39,28 @@ There are two cases where you might need to install this repo:
 1. Create project with [Composer's](https://getcomposer.org/) `create-project` command:
 
 ```bash
-composer create-project heyblackmagic/foundation --no-install ./YOUR_PATH && cd YOUR_PATH
-# Replace `YOUR_PATH` with the project directory path.
-# The --no-install option in Composer prevents the installation step
-# from running after the composer.lock file is updated
-```
-2. Ensure you are in the directory you created for the project:
+# Create a project directory and move into it:
+mkdir my-craft-site && cd my-craft-site
 
-```bash
-cd ./YOUR_PATH
-```
+# Set up the DDEV environment:
+ddev config --project-type=craftcms --docroot=public_html
 
-3. Set the project name and any other [DDEV config options](https://ddev.readthedocs.io/en/stable/users/configuration/config/).
-
-```bash
-ddev config --project-name=YOUR_PROJECT_NAME
-# Replace YOUR_PROJECT_NAME with the name of your project.
-```
-
-4. Boot the project:
-
-```bash
+# Boot the project and install the starter project:
 ddev start
+ddev composer create --no-scripts heyblackmagic/foundation
 ```
 
-5. Install Craft CMS. **IMPORTANT:** During the installation, the Craft CLI will prompt for information such as database credentials (name, password, user, and database driver) or the project URL. These values are pre-configured and should not be edited.
+2. Set the project name and any other [DDEV config options](https://ddev.readthedocs.io/en/stable/users/configuration/config/).
+
+```bash
+# Replace YOUR_PROJECT_NAME with the name of your project.
+ddev config --project-name=YOUR_PROJECT_NAME
+
+# Restart DDEV
+ddev restart
+```
+
+3. Install Craft CMS. **IMPORTANT:** During the installation, the Craft CLI will prompt for information such as database credentials (name, password, user, and database driver) or the project URL. These values are pre-configured and should not be edited.
 
 ```bash
 ddev craft install
@@ -75,7 +72,7 @@ ddev craft install \
   --site-url='$DDEV_PRIMARY_URL'
 ```
 
-6. Open project with VSCode.
+4. Open project with VSCode.
 
 ```bash
 ddev code
