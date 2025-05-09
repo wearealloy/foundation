@@ -2,4 +2,6 @@ const App = async () => {
   await import("./components");
 };
 
-export default App;
+App()
+  .then(() => console.log("App loaded"))
+  .catch((error) => console.log(error));
